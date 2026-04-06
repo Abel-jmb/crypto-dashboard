@@ -4,7 +4,7 @@ import { API_OPTIONS } from "../constants/api";
 const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -22,8 +22,8 @@ const useFetch = (url) => {
             statusText: res.statusText || "Ocurrió un error",
           };
         }
-        let json = await res.json();
-        setData(json);
+        let data = await res.json();
+        setData(data);
       } catch (err) {
         if (err.name === "AbortError") return;
         setError(err);

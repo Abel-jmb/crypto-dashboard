@@ -1,10 +1,4 @@
-import useFetch from "../hooks/useFetch";
-
-const Error = () => {
-
-    const {error} = useFetch()
-    
-
+const Error = ({error}) => {
     return (
         <div>
             <p>{error.status}--{error.statusText}</p>
