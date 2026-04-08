@@ -4,9 +4,9 @@ const Header = () => {
   const { theme, handleTheme } = useTheme();
 
   return (
-    <header className="p-6 dark:bg-gray-900 dark:text-amber-50">
+    <header className="p-5 dark:bg-gray-900 dark:text-amber-50">
       <div className="flex justify-between">
-        <h1 className="text-lg font-black tracking-tigh">Crypto Dashboard</h1>
+        <h1 className="text-lg font-bold tracking-tigh">Crypto Dashboard</h1>
         <div className="flex items-center justify-between gap-4">
           <label className="relative inline-flex h-6 w-12 cursor-pointer items-center">
             <input

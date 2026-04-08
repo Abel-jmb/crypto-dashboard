@@ -7,22 +7,22 @@ const CoinCard = ({ coin }) => {
   let isPositive = coin.price_change_percentage_24h > 0;
 
   return (
-    <article>
+    <article className="flex justify-between rounded-4xl p-6 bg-neutral-100 font-bold dark:bg-slate-800">
       <div>
         <h2>
-          {coin.name} {coin.symbol}
+          {coin.name} <span className="uppercase">{coin.symbol}</span>
         </h2>
-        <span className="mr-2">{formattedNumber}</span>
-        <span className={isPositive ? "text-green-500" : "text-red-500"}>
+        <p className="mr-2">{formattedNumber}</p>
+        <p className={isPositive ? "text-green-500" : "text-red-500"}>
           {formattedPercent}
-        </span>
+        </p>
         <p>
           Market Cap: <span>{formattedCompact}</span>
         </p>
       </div>
 
-      <div>
-        <img src={coin.image} alt={coin.name} />
+      <div className="h-24 w-24">
+        <img className="w-full h-full object-contain" src={coin.image} alt={coin.name} />
       </div>
     </article>
   );
