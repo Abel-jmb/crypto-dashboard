@@ -8,7 +8,7 @@ const CoinList = ({data, loading, error}) => {
         <div>
             {loading && <Loader />}
             {error && <Error error={error}/>}
-            <ul>
+            <ul className="grid grid-cols-1 gap-4">
                 {data && data.map(c => (
                     <CoinCard key={c.id} coin={c}/>
                 ))}
