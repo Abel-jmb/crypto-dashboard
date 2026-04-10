@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import { API_URL } from "./constants/api"
 import useFetch from "./hooks/useFetch"
 import SearchBar from "./components/SearchBar"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <Header />
     <SearchBar setSearch={setSearch} search={search}/>
     <CoinList data={data} loading={loading} error={error} search={search} setPerPage={setPerPage}/>
+    <Footer />
     </main>
     </>
   )
