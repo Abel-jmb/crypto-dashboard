@@ -4,7 +4,7 @@ const Header = () => {
   const { theme, handleTheme } = useTheme();
 
   return (
-    <header className="p-5 dark:bg-gray-900 dark:text-amber-50">
+    <header className="p-5 dark:bg-gray-900 dark:text-amber-50 lg:p-8 lg:mb-3">
       <div className="flex justify-between">
         <h1 className="text-xl font-bold tracking-tigh">Crypto Dashboard</h1>
         <div className="flex items-center justify-between gap-4">

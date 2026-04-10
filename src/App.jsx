@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-    <main className="min-h-screen max-w-md mx-auto px-4 dark:bg-gray-900 dark:text-amber-50">
+    <main className="min-h-screen max-w-md mx-auto px-4 dark:bg-gray-900 dark:text-amber-50 md:max-w-2xl lg:max-w-5xl lg:px-2">
     <Header />
     <SearchBar setSearch={setSearch} search={search}/>
     <CoinList data={data} loading={loading} error={error} search={search} setPerPage={setPerPage}/>

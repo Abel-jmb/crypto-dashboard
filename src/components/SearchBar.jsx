@@ -4,7 +4,7 @@ const SearchBar = ({ setSearch, search }) => {
   };
 
   return (
-    <div className="p-2 mb-4">
+    <div className="p-2 mb-4 lg:mx-auto lg:max-w-3xl">
       <h2 className="text-lg font-bold mb-4 flex items-center gap-2">Buscar Moneda</h2>
       <div className="relative group">
         <input

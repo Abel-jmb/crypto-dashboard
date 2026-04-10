@@ -15,7 +15,7 @@ const CoinList = ({ data, loading, error, search, setPerPage }) => {
     <div>
       {loading && <Loader />}
       {error && <Error error={error} />}
-      <ul className="grid grid-cols-1 gap-4">
+      <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {coinSearch && coinSearch.map((c) => <CoinCard key={c.id} coin={c} />)}
       </ul>
       <div className="flex flex-col items-center justify-center py-8 px-4 transition-all duration-500">
